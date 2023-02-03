@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Module for task 7"""
-from typing import Union, Tuple
+Module for task 8"""
+from typing import Callable
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
-    Type annotated function to return a tuple of a string and a float/integer
-    from the input k of string and v of float/integer"""
-    return (k, float(v**2))
+    Type annotated function that takes a float multiplier as argument and
+    returns a function that multiplies a float by multiplier"""
+    return lambda x: x * multiplier
